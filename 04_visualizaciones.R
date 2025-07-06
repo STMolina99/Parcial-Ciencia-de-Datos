@@ -98,7 +98,7 @@ graf_gross_waffle <- waffle(
   rows     = 10,
   colors   = colores_empresas[names(gross_margin_vector)],
   title    = "Gross Margin Promedio (2017–2025)",
-  legend_pos = "bottom"
+  legend_pos = "bottom",
 )
 
 ggsave(
@@ -118,58 +118,98 @@ crecimiento_y_eficiencia_operativa <- graf_ingresos_log + graf_gross_waffle +
 print(crecimiento_y_eficiencia_operativa)
 ggsave(
   filename = file.path(fin_dir, "crecimiento_y_eficiencia_operativa.png"),
-  plot     = slide2_final,
+  plot     = crecimiento_y_eficiencia_operativa,
   width    = 14, height = 7.5, dpi = 320,
   bg       = "transparent"
 )
 
-# 3.4 Apalancamiento y Valoración Relativa ----------------------------------
+
+
+# 3.4 Apalancamiento y Valoración Relativa (2017–2025) -----------------------
+
 # Traducción legible de símbolos
 nombre_empresas <- c(
-  "AAPL" = "Apple", "KO" = "Coca-Cola", "PFE" = "Pfizer",
-  "TM"   = "Toyota", "MELI" = "Mercado Libre"
+  "AAPL" = "Apple",     "KO" = "Coca-Cola",
+  "PFE"  = "Pfizer",    "TM" = "Toyota",
+  "MELI" = "Mercado Libre"
 )
 
+# Función para mapear "TTM" → 2025 y utilizar periodo 2017–2025
 prep_var <- function(df, concepto, nuevo_nombre) {
   df %>%
     filter(Concepto == concepto) %>%
-    mutate(Year = as.numeric(ifelse(Year=="TTM", NA, Year))) %>%
-    filter(!is.na(Year), Year <= 2024) %>%
-    pivot_longer(cols = all_of(names(nombre_empresas)), names_to="symbol", values_to=nuevo_nombre) %>%
-    
+    mutate(
+      Year = ifelse(Year == "TTM", "2025", Year),
+      Year = as.numeric(Year)
+    ) %>%
+    filter(Year >= 2017, Year <= 2025) %>%
+    pivot_longer(
+      cols      = all_of(names(nombre_empresas)),
+      names_to  = "symbol",
+      values_to = nuevo_nombre
+    ) %>%
     select(-Concepto)
 }
 
-ebitda     <- prep_var(IncomeStatementPortfolio, "EBITDA", "EBITDA")
-mcap       <- prep_var(IncomeStatementPortfolio, "Market Capitalization", "MarketCap")
-short_debt <- prep_var(BalanceSheetPortfolio, "Short Term Debt Incl. Current Port. of LT Debt", "ShortDebt")
-long_debt  <- prep_var(BalanceSheetPortfolio, "Long Term Debt", "LongDebt")
-cash       <- prep_var(BalanceSheetPortfolio, "Cash & Short Term Investments", "Cash")
+# Extraemos cada variable financiera
+ebitda     <- prep_var(IncomeStatementPortfolio, "EBITDA",   "EBITDA")
+mcap       <- prep_var(IncomeStatementPortfolio, "Market Capitalization",      "MarketCap")
+short_debt <- prep_var(BalanceSheetPortfolio,    "Short Term Debt Incl. Current Port. of LT Debt", "ShortDebt")
+long_debt  <- prep_var(BalanceSheetPortfolio,    "Long Term Debt",             "LongDebt")
+cash       <- prep_var(BalanceSheetPortfolio,    "Cash & Short Term Investments",                 "Cash")
 
-ratios_df <- reduce(list(ebitda,mcap,short_debt,long_debt,cash), full_join, by=c("symbol","Year")) %>%
+# Construimos ratios_df
+ratios_df <- reduce(
+  list(ebitda, mcap, short_debt, long_debt, cash),
+  full_join, by = c("symbol", "Year")
+) %>%
   mutate(
-    TotalDebt     = ShortDebt + LongDebt,
-    NetDebt       = TotalDebt - Cash,
-    NetDebt_EBITDA= NetDebt/EBITDA,
-    EV            = MarketCap + NetDebt,
-    EV_EBITDA     = EV/EBITDA,
-    nombre        = nombre_empresas[symbol]
+    TotalDebt       = ShortDebt + LongDebt,
+    NetDebt         = TotalDebt - Cash,
+    NetDebt_EBITDA  = NetDebt / EBITDA,
+    EV              = MarketCap + NetDebt,
+    EV_EBITDA       = EV / EBITDA,
+    nombre          = nombre_empresas[symbol]
   ) %>%
+  # Eliminamos casos no finitos
   filter(is.finite(NetDebt_EBITDA), is.finite(EV_EBITDA))
 
-ratios_2024 <- ratios_df %>% filter(Year==2024)
-facet_df <- ratios_2024 %>%
-  select(nombre, NetDebt_EBITDA, EV_EBITDA) %>%
-  pivot_longer(cols=-nombre, names_to="ratio", values_to="valor") %>%
-  mutate(ratio = recode(ratio,
-                        "NetDebt_EBITDA"="Net Debt / EBITDA",
-                        "EV_EBITDA"     ="EV / EBITDA"),
-         ratio = factor(ratio, levels=c("EV / EBITDA","Net Debt / EBITDA")))
-# Ordeno
-orden <- facet_df %>% filter(ratio=="EV / EBITDA") %>% arrange(desc(valor)) %>% pull(nombre)
-facet_df$nombre <- factor(facet_df$nombre, levels=orden)
-# Mediana
-ev_median <- median(facet_df$valor[facet_df$ratio=="EV / EBITDA"], na.rm=TRUE)
+# Filtro años con EBITDA positivo para no arrastrar negativos al benchmark
+# y calculo la MEDIANA histórica (en lugar de la media) para robustecer contra outliers
+summary_df <- ratios_df %>%
+  filter(EBITDA > 0) %>%                     # >0 excluye años con EBITDA negativo o cero
+  group_by(nombre) %>%
+  summarize(
+    EV_EBITDA_med = median(EV_EBITDA,       na.rm = TRUE),   # MEDIANA de múltiplos
+    ND_EBITDA_med = median(NetDebt_EBITDA, na.rm = TRUE)
+  ) %>%
+  pivot_longer(
+    cols      = ends_with("_med"),
+    names_to  = "ratio",
+    values_to = "valor"
+  ) %>%
+  mutate(
+    # Renombro a etiquetas limpias
+    ratio = recode(
+      ratio,
+      "EV_EBITDA_med" = "EV / EBITDA",
+      "ND_EBITDA_med" = "Net Debt / EBITDA"
+    ),
+    ratio = factor(ratio, levels = c("EV / EBITDA", "Net Debt / EBITDA"))
+  )
+
+# Ordenamos empresas según EV / EBITDA mediana descendente
+orden <- summary_df %>%
+  filter(ratio == "EV / EBITDA") %>%
+  arrange(desc(valor)) %>%
+  pull(nombre)
+summary_df$nombre <- factor(summary_df$nombre, levels = orden)
+
+# Calculamos la mediana de la mediana (benchmark) por faceta
+bench_avg <- summary_df %>%
+  group_by(ratio) %>%
+  summarize(benchmark = median(valor, na.rm = TRUE))
+
 # Paleta de colores
 paleta_apalancamiento_y_valrelativa <- c(
   "Apple"         = "#264b96",
@@ -179,28 +219,42 @@ paleta_apalancamiento_y_valrelativa <- c(
   "Toyota"        = "#af83cf"
 )
 
-grafico_ratios <- ggplot(facet_df, aes(x=valor,y=nombre, fill=nombre)) +
-  geom_col(width=0.6) + facet_wrap(~ratio, scales="free_x") +
-  scale_fill_manual(values=paleta_apalancamiento_y_valrelativa) +
-  geom_vline(data=data.frame(ratio="EV / EBITDA"), aes(xintercept=ev_median),
-             linetype="dotted", color="gray40", size=0.8, inherit.aes=FALSE) +
-  geom_vline(data=data.frame(ratio="Net Debt / EBITDA"), aes(xintercept=3),
-             linetype="dashed", color="black", size=0.8, inherit.aes=FALSE) +
-  labs(x=NULL,y=NULL) +
-  theme_minimal(base_size=13) + theme(
-    strip.text      = element_text(size=13, face="bold"),
-    legend.position = "none",
-    panel.grid      = element_line(color="gray85")
+# Gráfico facetado: barras + benchmark punteado
+grafico_ratios <- ggplot(summary_df, aes(x = valor, y = nombre, fill = nombre)) +
+  geom_col(width = 0.6) +
+  facet_wrap(~ ratio, scales = "free_x") +
+  scale_fill_manual(values = paleta_apalancamiento_y_valrelativa) +
+  geom_vline(
+    data = bench_avg,
+    aes(xintercept = benchmark),
+    linetype = "dotted", color = "gray40", size = 0.8,
+    inherit.aes = FALSE
+  ) +
+  labs(x = NULL, y = NULL) +
+  theme_minimal(base_size = 13) +
+  theme(
+    strip.text       = element_text(size = 13, face = "bold"),
+    legend.position  = "none",
+    panel.grid       = element_line(color = "gray85"),
+    panel.background = element_rect(fill = "transparent", color = NA),
+    plot.background  = element_rect(fill = "transparent", color = NA)
   )
 
+# Título centrado y fondo transparente
 titulo <- ggplot() + theme_void() +
-  labs(title="Apalancamiento y Valoración Relativa",
-       subtitle="Comparación Apple, Coca-Cola, Pfizer, Toyota y Mercado Libre (2024)") +
-  theme(plot.title=element_text(size=18,face="bold"),
-        plot.subtitle=element_text(size=13))
+  labs(
+    title    = "Apalancamiento y Valoración Relativa",
+    subtitle = "Matriz de medianas 2017–2025 (solo EBITDA > 0)"
+  ) +
+  theme(
+    plot.title      = element_text(size = 18, face = "bold", hjust = 0.5),
+    plot.subtitle   = element_text(size = 13,           hjust = 0.5),
+    plot.background = element_rect(fill = "transparent", color = NA)
+  )
 
-Apalancamiento_y_valoracion_relativa <- titulo / grafico_ratios + plot_layout(heights=c(0.12,1))
-print(Apalancamiento_y_valoracion_relativa)
+# Ensamblaje y guardado final
+Apalancamiento_y_valoracion_relativa <- titulo / grafico_ratios +
+  plot_layout(heights = c(0.12, 1))
 
 ggsave(
   filename = file.path(fin_dir, "Apalancamiento_y_valoracion_relativa.png"),
@@ -208,6 +262,9 @@ ggsave(
   width    = 10, height = 6, dpi = 300,
   bg       = "transparent"
 )
+
+
+
 
 # 3.5 Heatmaps ROE, EPS Growth y Debt/Equity ------------------------------------
 # Calculo el EPS Growth
