@@ -1,0 +1,307 @@
+"Concepto","Year","AAPL","KO","MELI","PFE","TM"
+"Net Income","TTM",97294,10799,1900.97,7912,31332.43
+"Net Income","2024",93736,10649,1911,8062,31418.46
+"Net Income","2023",96995,10703,987,2158,35071.51
+"Net Income","2022",99803,9571,482,31401,18395.92
+"Net Income","2021",94680,9804,83.3,22025,25581.08
+"Net Income","2020",57411,7768,-0.71,9195,21520.22
+"Net Income","2019",55256,8985,-172,16302,19416.97
+"Net Income","2018",59531,6476,-36.59,11188,16052.7
+"Net Income","2017",48351,1182,13.78,21355,23333.48
+"Depreciation","TTM",11502,1080,583.33,6895,14726.56
+"Depreciation","2024",11445,1075,617,7013,14766.99
+"Depreciation","2023",11519,1128,524,6290,14433.14
+"Depreciation","2022",11104,1260,403,5064,15052.7
+"Depreciation","2021",11284,1452,203.94,5191,16212.84
+"Depreciation","2020",11056,1536,104.99,4681,15503.77
+"Depreciation","2019",12547,1365,73.32,5795,14673.13
+"Depreciation","2018",10903,1086,45.79,6384,16162.86
+"Depreciation","2017",10157,1260,40.92,6269,15645.54
+"Other Funds (Non Cash)","TTM",9727,849,2545.5,3154,-3457.24
+"Other Funds (Non Cash)","2024",9422,1326,2442,2837,-3466.73
+"Other Funds (Non Cash)","2023",8606,616,2118,5866,7079.58
+"Other Funds (Non Cash)","2022",9149,914,1741,4982,-555.75
+"Other Funds (Non Cash)","2021",7759,-850,707.59,-3147,1395.27
+"Other Funds (Non Cash)","2020",6732,-132,375.75,2409,-1281.81
+"Other Funds (Non Cash)","2019",5416,35,178.39,-6152,106.33
+"Other Funds (Non Cash)","2018",4896,1718,48.99,1387,2997.85
+"Other Funds (Non Cash)","2017",4674,2280,165.99,-9746,-3190.34
+"Funds from Operations","TTM",118523,12985,4812.16,15637,42601.74
+"Funds from Operations","2024",114603,13039,4727,15810,42718.72
+"Funds from Operations","2023",117120,12445,3345,10872,56584.22
+"Funds from Operations","2022",120951,11623,2529,37683,32892.87
+"Funds from Operations","2021",108949,11300,965.36,19776,43189.17
+"Funds from Operations","2020",74984,9154,409.72,14710,35742.18
+"Funds from Operations","2019",72879,10105,96.17,16541,34196.43
+"Funds from Operations","2018",42740,8867,-34.39,16754,34432.55
+"Funds from Operations","2017",69148,3466,196.12,15468,33641.65
+"Extraordinary Item","TTM",0,0,0,0,0
+"Extraordinary Item","2024",0,0,0,0,0
+"Extraordinary Item","2023",0,0,0,0,0
+"Extraordinary Item","2022",0,0,0,0,0
+"Extraordinary Item","2021",0,0,0,0,0
+"Extraordinary Item","2020",0,0,0,0,0
+"Extraordinary Item","2019",0,0,0,0,0
+"Extraordinary Item","2018",0,0,0,0,0
+"Extraordinary Item","2017",0,0,0,0,0
+"Changes in Working Capital","TTM",-8967,-11910,1055.36,-1649,-18418.06
+"Changes in Working Capital","2024",3651,-6234,1978,-3066,-18468.63
+"Changes in Working Capital","2023",-6577,-846,1102,-2172,-27494.97
+"Changes in Working Capital","2022",1200,-605,411,-4456,-11087
+"Changes in Working Capital","2021",-4911,1325,-0.31,12804,-10061.76
+"Changes in Working Capital","2020",5690,690,772.83,-307,-10028.17
+"Changes in Working Capital","2019",-3488,366,354.92,-3953,-12136.38
+"Changes in Working Capital","2018",34694,-1240,265.3,-927,-467.01
+"Changes in Working Capital","2017",-5550,3019,72.89,1334,4343.71
+"Cash from Operating Activities","TTM",109556,1075,5867.52,13988,24183.68
+"Cash from Operating Activities","2024",118254,6805,6705,12744,24250.08
+"Cash from Operating Activities","2023",110543,11599,4447,8700,29089.25
+"Cash from Operating Activities","2022",122151,11018,2940,33227,21805.87
+"Cash from Operating Activities","2021",104038,12625,965.04,32580,33127.4
+"Cash from Operating Activities","2020",80674,9844,1182.55,14403,25714.01
+"Cash from Operating Activities","2019",69391,10471,451.09,12588,22060.05
+"Cash from Operating Activities","2018",77434,7627,230.91,15827,33965.54
+"Cash from Operating Activities","2017",63598,6485,269.01,16802,37985.36
+"Capital Expenditures","TTM",-11070,-2003,-913.98,-2769,-34395
+"Capital Expenditures","2024",-9447,-2064,-860,-2909,-34489.43
+"Capital Expenditures","2023",-10959,-1852,-509,-3907,-34912.27
+"Capital Expenditures","2022",-10708,-1484,-455,-3236,-27345.79
+"Capital Expenditures","2021",-11085,-1367,-609.5,-2711,-34085.19
+"Capital Expenditures","2020",-7309,-1177,-247.14,-2226,-35527.4
+"Capital Expenditures","2019",-10495,-2054,-136.87,-2490,-34458.95
+"Capital Expenditures","2018",-13313,-1548,-97.75,-2196,-35941.29
+"Capital Expenditures","2017",-12795,-1675,-74.88,-2217,-32469.8
+"Net Assets From Acquisitions","TTM",0,-349,-5.5,0,0
+"Net Assets From Acquisitions","2024",0,-315,-6,0,0
+"Net Assets From Acquisitions","2023",0,-62,0,-43430,0
+"Net Assets From Acquisitions","2022",-306,-73,0,-22997,0
+"Net Assets From Acquisitions","2021",-33,-4766,-50.62,0,0
+"Net Assets From Acquisitions","2020",-1524,-1052,-6.94,0,0
+"Net Assets From Acquisitions","2019",-624,-5542,0,-10861,0
+"Net Assets From Acquisitions","2018",-721,-1263,-4.2,0,0
+"Net Assets From Acquisitions","2017",-329,-3809,-8.57,-1000,-5.2
+"Sale of Fixed Assets and Businesses","TTM",0,1374,0,0,11635.59
+"Sale of Fixed Assets and Businesses","2024",0,3525,0,0,11667.54
+"Sale of Fixed Assets and Businesses","2023",0,504,0,0,14962.55
+"Sale of Fixed Assets and Businesses","2022",0,533,0,0,12659.6
+"Sale of Fixed Assets and Businesses","2021",0,2288,0,0,14059.3
+"Sale of Fixed Assets and Businesses","2020",0,378,0.27,0,13315.81
+"Sale of Fixed Assets and Businesses","2019",0,1407,0,0,13236.44
+"Sale of Fixed Assets and Businesses","2018",0,1610,NA,NA,13125.26
+"Sale of Fixed Assets and Businesses","2017",0,3925,0,NA,11576.87
+"Purchase or Sale of Investments","TTM",26311,1555,-2487.88,6665,-1412.84
+"Purchase or Sale of Investments","2024",13690,949,-2748,5561,-1416.72
+"Purchase or Sale of Investments","2023",16001,-2344,-836,15239,-4988.93
+"Purchase or Sale of Investments","2022",-9560,1020,-1671,6682,1354.18
+"Purchase or Sale of Investments","2021",-2819,1029,424.69,-19517,-2004.7
+"Purchase or Sale of Investments","2020",5335,252,332.59,-1672,-6291.43
+"Purchase or Sale of Investments","2019",58093,2269,-1137.07,9304,-273.06
+"Purchase or Sale of Investments","2018",30845,7188,-513.28,6434,7741.07
+"Purchase or Sale of Investments","2017",-33147,-602,160.29,-2194,-4776.38
+"Purchase of Investments","TTM",-36056,-5595,-15457.69,-15103,-25940.85
+"Purchase of Investments","2024",-48656,-5640,-16710,-10313,-26012.07
+"Purchase of Investments","2023",-29513,-6698,-18936,-31178,-20558.31
+"Purchase of Investments","2022",-76923,-3751,-12694,-38780,-8487.57
+"Purchase of Investments","2021",-109689,-6030,-7375.86,-47613,-21605.88
+"Purchase of Investments","2020",-115148,-13583,-5199.88,-14402,-25732.96
+"Purchase of Investments","2019",-40631,-4704,-4490.68,-7036,-22122.97
+"Purchase of Investments","2018",-73227,-7789,-3176.08,-17391,-16595.52
+"Purchase of Investments","2017",-159486,-17296,-4553.65,-18133,-27545.33
+"Sale Or Maturity of Investments","TTM",62367,7150,12969.81,21768,24528.01
+"Sale Or Maturity of Investments","2024",62346,6589,13962,15874,24595.36
+"Sale Or Maturity of Investments","2023",45514,4354,18100,46417,15569.38
+"Sale Or Maturity of Investments","2022",67363,4771,11023,45462,9841.75
+"Sale Or Maturity of Investments","2021",106870,7059,7800.55,28096,19601.18
+"Sale Or Maturity of Investments","2020",120483,13835,5532.46,12730,19441.52
+"Sale Or Maturity of Investments","2019",98724,6973,3353.61,16340,21849.91
+"Sale Or Maturity of Investments","2018",104072,14977,2662.8,23825,24336.59
+"Sale Or Maturity of Investments","2017",126339,16694,4713.93,15939,22768.95
+"Other Uses","TTM",-1214,90,-4592.25,-2,-3235.13
+"Other Uses","2024",-1308,0,-4702,-2,-3244.01
+"Other Uses","2023",-1337,0,-2105,-180,-9630.31
+"Other Uses","2022",-1780,-1465,-1746,-192,0
+"Other Uses","2021",-608,0,-1367.46,-317,0
+"Other Uses","2020",-791,NA,-348.74,-374,-15663.38
+"Other Uses","2019",-1078,-56,-173.85,-94,0
+"Other Uses","2018",-745,-60,-57.23,0,-143240.52
+"Other Uses","2017",-395,-93,-99.47,0,-135867.43
+"Other Sources","TTM",0,460,28.57,302,0
+"Other Sources","2024",0,429,29,2,0
+"Other Sources","2023",0,405,0,0,0
+"Other Sources","2022",0,706,1,0,1533.6
+"Other Sources","2021",0,51,6.35,0,16891.5
+"Other Sources","2020",0,122,17.78,0,0
+"Other Sources","2019",0,NA,NA,196,1954.21
+"Other Sources","2018",0,91,NA,287,133992.94
+"Other Sources","2017",220,15,0,671,128518.29
+"Cash from Investing Activities","TTM",14027,1127,-7969.04,4194,-27407.37
+"Cash from Investing Activities","2024",2935,2524,-8287,2652,-27482.62
+"Cash from Investing Activities","2023",3705,-3349,-3450,-32278,-34568.96
+"Cash from Investing Activities","2022",-22354,-763,-3871,-19743,-11798.41
+"Cash from Investing Activities","2021",-14545,-2765,-1596.53,-22546,-5139.11
+"Cash from Investing Activities","2020",-4289,-1477,-252.18,-4271,-44166.4
+"Cash from Investing Activities","2019",45896,-3976,-1447.79,-3945,-19541.37
+"Cash from Investing Activities","2018",16066,5927,-672.46,4525,-24322.55
+"Cash from Investing Activities","2017",-46446,-2239,-22.64,-4740,-33023.66
+"Cash Dividends Paid","TTM",-15313,-8349,0,-9577,-7407.19
+"Cash Dividends Paid","2024",-15234,-8359,0,-9512,-7427.53
+"Cash Dividends Paid","2023",-15025,-7952,0,-9247,-6087.02
+"Cash Dividends Paid","2022",-14841,-7616,0,-8983,-5371.85
+"Cash Dividends Paid","2021",-14467,-7252,0,-8729,-6317.12
+"Cash Dividends Paid","2020",-14081,-7047,-3.36,-8440,-5897.88
+"Cash Dividends Paid","2019",-14119,-6845,-2.84,-8043,-5691.39
+"Cash Dividends Paid","2018",-13712,-6644,-6.62,-7978,-5814.58
+"Cash Dividends Paid","2017",-12769,-6320,-26.5,-7659,-5656.21
+"Change in Capital Stock","TTM",-101109,-847,-0.92,0,-7712.77
+"Change in Capital Stock","2024",-94949,-1048,-1,0,-7733.95
+"Change in Capital Stock","2023",-77550,-1750,-356,0,-1597.96
+"Change in Capital Stock","2022",-89402,-581,-148,-2000,-3181.13
+"Change in Capital Stock","2021",-84866,591,1430.4,0,-3601.57
+"Change in Capital Stock","2020",-71478,529,-54.09,0,1884.68
+"Change in Capital Stock","2019",-66116,-91,1965.18,-8471,-4379.16
+"Change in Capital Stock","2018",-72069,-436,-12.84,-10939,-4956.39
+"Change in Capital Stock","2017",-32345,-2087,-67.31,-4138,-4040.5
+"Repurchase of Common Pref Stock","TTM",-101109,-1463,-0.92,0,-7712.77
+"Repurchase of Common Pref Stock","2024",-94949,-1795,-1,0,-7733.95
+"Repurchase of Common Pref Stock","2023",-77550,-2289,-356,0,-1597.96
+"Repurchase of Common Pref Stock","2022",-89402,-1418,-148,-2000,-3181.13
+"Repurchase of Common Pref Stock","2021",-85971,-111,-485.89,0,-3601.57
+"Repurchase of Common Pref Stock","2020",-72358,-118,-54.09,0,0
+"Repurchase of Common Pref Stock","2019",-66897,-1103,-0.72,-8865,-4379.16
+"Repurchase of Common Pref Stock","2018",-72738,-1912,-148.94,-12198,-4956.39
+"Repurchase of Common Pref Stock","2017",-32900,-3682,-67.31,-5000,-4040.5
+"Sale of Common Pref Stock","TTM",0,616,0,0,0
+"Sale of Common Pref Stock","2024",0,747,0,0,0
+"Sale of Common Pref Stock","2023",0,539,0,0,0
+"Sale of Common Pref Stock","2022",0,837,0,0,0
+"Sale of Common Pref Stock","2021",1105,702,1916.28,0,0
+"Sale of Common Pref Stock","2020",880,647,0,0,1884.68
+"Sale of Common Pref Stock","2019",781,1012,1965.9,394,0
+"Sale of Common Pref Stock","2018",669,1476,136.11,1259,0
+"Sale of Common Pref Stock","2017",555,1595,0,862,0
+"Proceedsfrom Stock Options","TTM",0,747,0,0,0
+"Proceedsfrom Stock Options","2024",0,747,0,0,0
+"Proceedsfrom Stock Options","2023",0,539,0,0,0
+"Proceedsfrom Stock Options","2022",0,837,0,0,0
+"Proceedsfrom Stock Options","2021",1105,702,1519.55,0,0
+"Proceedsfrom Stock Options","2020",880,647,0,0,1884.68
+"Proceedsfrom Stock Options","2019",781,1012,1965.9,0,0
+"Proceedsfrom Stock Options","2018",669,1476,0,0,0
+"Proceedsfrom Stock Options","2017",555,1595,0,0,0
+"Issuance or Reduction of Debt, Net","TTM",-6843,3837,1337.69,-7420,16909.87
+"Issuance or Reduction of Debt, Net","2024",-5998,2528,3173,-7159,16956.3
+"Issuance or Reduction of Debt, Net","2023",-9901,1857,782,35945,25634.2
+"Issuance or Reduction of Debt, Net","2022",-123,-958,1064,-3516,8586.16
+"Issuance or Reduction of Debt, Net","2021",12665,228,494.58,-1103,-11570.5
+"Issuance or Reduction of Debt, Net","2020",2499,-1862,299.71,-12755,30185.6
+"Issuance or Reduction of Debt, Net","2019",-7819,-1841,60.6,8764,13912.9
+"Issuance or Reduction of Debt, Net","2018",432,-2995,628.66,-935,6519.44
+"Issuance or Reduction of Debt, Net","2017",29014,1089,42.9,-941,6219.65
+"Change in Long Term Debt","TTM",-10817,0,-46.73,-1000,16414.84
+"Change in Long Term Debt","2024",-9958,0,-51,-2250,16459.91
+"Change in Long Term Debt","2023",-5923,0,-33,28262,22855.93
+"Change in Long Term Debt","2022",-4078,0,-20,-3298,6817.46
+"Change in Long Term Debt","2021",11643,0,-1881.6,-1007,-6416.03
+"Change in Long Term Debt","2020",3462,0,-4.95,1219,39976.83
+"Change in Long Term Debt","2019",-1842,0,0,-1864,11346.49
+"Change in Long Term Debt","2018",469,0,0,1408,5038.01
+"Change in Long Term Debt","2017",25162,0,42.9,-880,3082.14
+"Issuance of Long Term Debt","TTM",0,0,0,0,87536.3
+"Issuance of Long Term Debt","2024",0,0,0,0,87776.64
+"Issuance of Long Term Debt","2023",5228,0,0,30831,83382.83
+"Issuance of Long Term Debt","2022",5465,0,NA,0,68455.52
+"Issuance of Long Term Debt","2021",20393,0,NA,997,72283.39
+"Issuance of Long Term Debt","2020",16091,0,NA,5222,91047.06
+"Issuance of Long Term Debt","2019",6963,0,0,4942,52338.73
+"Issuance of Long Term Debt","2018",6969,0,NA,4974,45096.13
+"Issuance of Long Term Debt","2017",28662,0,47.91,5274,43253.94
+"Reduction of Long Term Debt","TTM",-10817,0,-46.73,-1000,-71121.46
+"Reduction of Long Term Debt","2024",-9958,0,-51,-2250,-71316.73
+"Reduction of Long Term Debt","2023",-11151,0,-33,-2569,-60526.9
+"Reduction of Long Term Debt","2022",-9543,0,-20,-3298,-61638.06
+"Reduction of Long Term Debt","2021",-8750,0,-1881.6,-2004,-78699.43
+"Reduction of Long Term Debt","2020",-12629,0,-4.95,-4003,-51070.22
+"Reduction of Long Term Debt","2019",-8805,0,0,-6806,-40992.24
+"Reduction of Long Term Debt","2018",-6500,0,0,-3566,-40058.12
+"Reduction of Long Term Debt","2017",-3500,0,-5,-6154,-40171.8
+"Net Financing Active Other Cash Flow","TTM",-6077,-134,0,-439,-499.69
+"Net Financing Active Other Cash Flow","2024",-5802,-31,0,-469,-501.06
+"Net Financing Active Other Cash Flow","2023",-6012,-465,0,-632,-677.28
+"Net Financing Active Other Cash Flow","2022",-6383,-1095,0,-335,-447.74
+"Net Financing Active Other Cash Flow","2021",-6685,-353,0,16,-460.28
+"Net Financing Active Other Cash Flow","2020",-3760,310,0,11547,-345.08
+"Net Financing Active Other Cash Flow","2019",-2922,-227,0,-735,-505.46
+"Net Financing Active Other Cash Flow","2018",-2527,-272,0,-589,-625.52
+"Net Financing Active Other Cash Flow","2017",-1247,-91,0,-612,-575.32
+"Other Financing Activities Uses","TTM",-6077,-134,0,-439,-832.29
+"Other Financing Activities Uses","2024",-5802,-31,0,-469,-834.58
+"Other Financing Activities Uses","2023",-6012,-465,0,-632,-677.28
+"Other Financing Activities Uses","2022",-6383,-1095,0,-335,-627.12
+"Other Financing Activities Uses","2021",-6685,-353,0,0,-460.28
+"Other Financing Activities Uses","2020",-3760,NA,0,-444,-345.08
+"Other Financing Activities Uses","2019",-2922,-227,0,-735,-505.46
+"Other Financing Activities Uses","2018",-2527,-272,0,-589,-625.52
+"Other Financing Activities Uses","2017",-1874,-91,0,-612,-575.32
+"Cash from Financing Activities","TTM",-129342,-3884,3166.37,-17436,1290.23
+"Cash from Financing Activities","2024",-121983,-6910,3172,-17140,1293.77
+"Cash from Financing Activities","2023",-108488,-8310,426,26066,17271.91
+"Cash from Financing Activities","2022",-110749,-10250,916,-14834,-414.56
+"Cash from Financing Activities","2021",-93353,-6786,1924.98,-9816,-21949.43
+"Cash from Financing Activities","2020",-86820,-8070,242.27,-9649,25827.27
+"Cash from Financing Activities","2019",-90976,-9004,2021.01,-8485,3336.88
+"Cash from Financing Activities","2018",-87876,-10347,608.88,-20441,-4877.05
+"Cash from Financing Activities","2017",-17347,-7409,-50.9,-13350,-4052.38
+"Net Change in Cash","TTM",-5759,-2004,608.74,702,-2810.61
+"Net Change in Cash","2024",-794,1796,851,-1810,-2818.33
+"Net Change in Cash","2023",5760,-133,485,2448,13105.56
+"Net Change in Cash","2022",-10952,-200,-285,-1515,10355.2
+"Net Change in Cash","2021",-3860,2915,1139.74,159,9012.85
+"Net Change in Cash","2020",-10435,373,1056.8,475,9451.54
+"Net Change in Cash","2019",24311,-2581,986.73,126,4558.66
+"Net Change in Cash","2018",5624,2945,76.44,-205,4390.44
+"Net Change in Cash","2017",-195,-2477,154.12,-1235,516.04
+"Free Cash Flow","TTM",98486,-928,4953.53,11219,-7894.32
+"Free Cash Flow","2024",108807,4741,5845,9835,-7916
+"Free Cash Flow","2023",99584,9747,3938,4793,-3511.24
+"Free Cash Flow","2022",111443,9534,2486,29991,-2969.92
+"Free Cash Flow","2021",92953,11258,392.11,29869,2122.01
+"Free Cash Flow","2020",73365,8667,935.5,12177,-7187.96
+"Free Cash Flow","2019",58896,8417,314.29,10516,-9593.75
+"Free Cash Flow","2018",64121,6079,133.34,13785,249.88
+"Free Cash Flow","2017",51147,4810,194.16,14846,5515.55
+"Preferred Dividends (Cash Flow)","TTM",NA,NA,NA,NA,NA
+"Preferred Dividends (Cash Flow)","2024",0,0,0,0,0
+"Preferred Dividends (Cash Flow)","2023",0,0,0,0,0
+"Preferred Dividends (Cash Flow)","2022",0,0,0,0,0
+"Preferred Dividends (Cash Flow)","2021",0,0,0,0,0
+"Preferred Dividends (Cash Flow)","2020",0,0,-3.36,0,0
+"Preferred Dividends (Cash Flow)","2019",0,0,-2.84,NA,0
+"Preferred Dividends (Cash Flow)","2018",0,0,0,NA,-78.36
+"Preferred Dividends (Cash Flow)","2017",0,0,0,NA,-55.89
+"Price to Free Cash Flow","TTM",39.44,NA,19.97,87.67,NA
+"Price to Free Cash Flow","2024",37.51,NA,14.75,468.18,NA
+"Price to Free Cash Flow","2023",32.02,142.45,20.36,NA,NA
+"Price to Free Cash Flow","2022",25.42,144.27,17.47,13.98,NA
+"Price to Free Cash Flow","2021",31.57,64.15,171.26,15.94,NA
+"Price to Free Cash Flow","2020",33.2,146.34,89.39,55.48,NA
+"Price to Free Cash Flow","2019",22.72,151.9,89.42,89.91,NA
+"Price to Free Cash Flow","2018",22.39,NA,102.91,44.93,NA
+"Price to Free Cash Flow","2017",21.09,NA,82.87,30.53,NA
+"Income Taxes Payable","TTM",NA,NA,NA,NA,NA
+"Income Taxes Payable","2024",NA,-823,NA,NA,NA
+"Income Taxes Payable","2023",NA,-578,NA,NA,NA
+"Income Taxes Payable","2022",NA,-360,NA,NA,NA
+"Income Taxes Payable","2021",NA,-566,NA,NA,NA
+"Income Taxes Payable","2020",NA,-16,NA,NA,NA
+"Income Taxes Payable","2019",NA,96,NA,NA,-935.74
+"Income Taxes Payable","2018",NA,-17,NA,NA,-1274.44
+"Income Taxes Payable","2017",NA,-153,NA,NA,2154.18
+"Exchange Rate Effect","TTM",NA,-322,-456.12,-45,-877.15
+"Exchange Rate Effect","2024",NA,-623,-739,-66,-879.56
+"Exchange Rate Effect","2023",NA,-73,-938,-40,1313.35
+"Exchange Rate Effect","2022",NA,-205,-270,-165,762.3
+"Exchange Rate Effect","2021",NA,-159,-153.75,-59,2973.99
+"Exchange Rate Effect","2020",NA,76,-115.84,-8,2076.66
+"Exchange Rate Effect","2019",NA,-72,-37.58,-32,-1296.91
+"Exchange Rate Effect","2018",NA,-262,-90.9,-116,-375.5
+"Exchange Rate Effect","2017",NA,241,-41.35,53,-393.28
