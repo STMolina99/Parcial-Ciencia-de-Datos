@@ -273,20 +273,20 @@ print(p_int)
 widget_int <- ggplotly(p_int, tooltip = "text")
 
 # Define la ruta de salida dentro de tu carpeta 'output'
-ruta_para_html <- file.path(fin_dir, "grafico_interactivo_Markowitz.html")
-res_html <- POST(
-  url  = "https://0x0.st",
-  body = list(file = upload_file(ruta_para_html))
-)
+#ruta_para_html <- file.path(fin_dir, "grafico_interactivo_Markowitz.html")
+#res_html <- POST(
+#  url  = "https://0x0.st",
+#  body = list(file = upload_file(ruta_para_html))
+#)
 
 # Extraemos la URL resultante
-url_html <- content(res_html, "text", encoding = "UTF-8") %>% trimws()
-cat("Tu URL pública al HTML es:\n", url_html, "\n")
+#url_html <- content(res_html, "text", encoding = "UTF-8") %>% trimws()
+#cat("Tu URL pública al HTML es:\n", url_html, "\n")
 
 # Guarda el widget como un archivo HTML autocontenido
-saveWidget(widget_int,
-           file = ruta_para_html,
-           selfcontained = TRUE)
+#saveWidget(widget_int,
+#           file = ruta_para_html,
+#           selfcontained = TRUE)
 ruta_out3 <- file.path(fin_dir, "grafico_markowitz_estatico.png")
 ggsave(
   filename = ruta_out3,
@@ -600,26 +600,6 @@ ggsave(
 )
 
 
-# ——— Organizar scripts en carpeta “scripts” ———
-scripts_dir <- file.path(getwd(), "scripts")
-
-# 1. Crear carpeta “scripts” si no existe
-if (!dir.exists(scripts_dir)) {
-  dir.create(scripts_dir)
-}
-
-# 2. Definir los archivos a mover
-scripts_to_move <- c(
-  "01_extraccion_datos.R",
-  "02_limpieza_de_datos.R",
-  "03_estadisticas_precio_rentabilidades.R"
-)
-
-# 3. Moverlos (file.rename devuelve TRUE si lo logra)
-moved <- file.rename(
-  from = scripts_to_move,
-  to   = file.path(scripts_dir, scripts_to_move)
-)
 
 
 
