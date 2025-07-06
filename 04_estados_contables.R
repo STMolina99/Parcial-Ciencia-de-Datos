@@ -524,39 +524,28 @@ ggsave(
 )
 
 # 3.7 Gráficos individuales --------------------------------------------
-
 # Listas de ratios y empresas
 ratios_list   <- c("ROE por año", "EPS Growth por año", "Debt/Equity por año")
 empresas_list <- c("Apple", "Coca-Cola", "Pfizer", "Toyota", "Meli")
 
-# Genero un bucle para los graficos
+# Genero un bucle para los gráficos y los guardo
 for (r in ratios_list) {
-  plots_por_ratio <- lapply(empresas_list, function(s) {
-    plot_individual(ratios_tidy, r, s)
-  })
-  print(
-    wrap_plots(plots_por_ratio, nrow = 1) +
-      plot_annotation(title = paste0("Gráficos individuales — ", r))
-  )
-}
-
-# Generar y guardar gráficos individuales
-individual_plots <- list()
-for (r in c("ROE por año", "EPS Growth por año", "Debt/Equity por año")) {
-  for (s in levels(ratios_tidy$symbol)) {
-    key <- paste0(gsub("[ /]","_", r), "__", s)
+  for (s in empresas_list) {
+    # genero el gráfico
     p <- plot_individual(ratios_tidy, r, s)
-    individual_plots[[key]] <- p
+    # construyo el nombre de archivo: reemplazo espacios y "/" por "_"
+    fname <- paste0(gsub("[ /]", "_", r), "__", s, ".png")
+    # guardo con ese nombre
     ggsave(
-      filename = file.path(fin_dir, paste0(key, ".png")),
+      filename = file.path(fin_dir, fname),
       plot     = p,
       width    = 10,
       height   = 6,
-      dpi      = 300
+      dpi      = 300,
+      bg       = "transparent"
     )
   }
 }
-
 
 # ——— Organizar scripts en carpeta “scripts” ———
 scripts_dir <- file.path(getwd(), "scripts")
