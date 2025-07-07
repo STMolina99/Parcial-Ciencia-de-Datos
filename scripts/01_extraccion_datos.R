@@ -27,7 +27,7 @@ for (pkg in paquetes) {
 
 #Vamos a definir el periodo que vamos a analizar los datos (2017-2025). Tener bastantes años nos va a dar una mejor nocion de como se movieron los activos
 fecha_inicio <- as.Date("2017-01-01")
-fecha_fin <- Sys.Date()
+fecha_fin <- as.Date("2025-07-06")
 
 #Vamos a definir los activos financieron con los que trabajaremos.
 tickers_acciones <- c(
